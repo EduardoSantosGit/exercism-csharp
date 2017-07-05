@@ -60,35 +60,35 @@ public class ClockTest
         Assert.Equal("08:53", clock.ToString());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Wraps_around_midnight()
     {
         var clock = new Clock(23, 59).Add(2);
         Assert.Equal("00:01", clock.ToString());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Wraps_around_midnight_backwards()
     {
         var clock = new Clock(0, 1).Subtract(2);
         Assert.Equal("23:59", clock.ToString());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Midnight_is_zero_hundred_hours()
     {
         var clock = new Clock(24);
         Assert.Equal("00:00", clock.ToString());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Sixty_minutes_is_next_hour()
     {
         var clock = new Clock(1, 60);
         Assert.Equal("02:00", clock.ToString());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Clocks_with_same_time_are_equal()
     {
         var clock1 = new Clock(14, 30);
@@ -96,7 +96,7 @@ public class ClockTest
         Assert.Equal(clock2, clock1);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Clocks_with_different_time_are_not_equal()
     {
         var clock1 = new Clock(15, 30);
@@ -104,7 +104,7 @@ public class ClockTest
         Assert.NotEqual(clock2, clock1);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Overflown_clocks_with_same_time_are_equal()
     {
         var clock1 = new Clock(14, 30);
@@ -112,7 +112,7 @@ public class ClockTest
         Assert.Equal(clock2, clock1);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Can_wrap_around_more_than_one_day()
     {
         var clock = new Clock(10).Subtract(7224);
