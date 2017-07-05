@@ -16,8 +16,18 @@ public static class BeerSong
     }
 
     public static string Verses(int begin, int end)
-    {
-        throw new NotImplementedException("You need to implement this function.");
+    {   
+        string frase = "";
+        int contador = begin - end;
+        for(int i=0;i<=contador;i++){
+            if(i == 0){
+                frase += montaPrimeiraLinha(begin - i) + "\n" + montaSegundaLinha(begin - i) + "\n";
+            }
+            else {
+                frase += "\n" + montaPrimeiraLinha(begin - i) + "\n" + montaSegundaLinha(begin - i) + "\n";
+            }
+        }
+        return frase;
     }
 
     public static string montaPrimeiraLinha(int num){
@@ -40,16 +50,18 @@ public static class BeerSong
             return linha;
        }
 
-        if(aux > 1){
-            linha = linha.Replace("00",aux.ToString());     
-        }
-        else if (aux == 1){
-            linha = linha.Replace("00",aux.ToString()).Replace("bottles","bottle"); 
-        }
-        else {
-            linha = linha.Replace("00","no").Replace("bottles","bottle");
-        }
-        return linha;
+       if(aux > 1){
+          linha = linha.Replace("00",aux.ToString());     
+       }
+       else if (aux == 1){
+          linha = linha.Replace("00",aux.ToString()).Replace("bottles","bottle"); 
+       }
+       else {
+          linha = linha.Replace("00","no").Replace("bottles","bottle");
+       }
+       return linha;
     }
+
+
 
 }
