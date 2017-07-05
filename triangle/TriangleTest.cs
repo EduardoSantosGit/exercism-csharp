@@ -62,31 +62,31 @@ public class TriangleTest
         Assert.Equal(TriangleKind.Scalene, Triangle.Kind(0.4m, 0.6m, 0.3m));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Triangles_with_no_size_are_illegal()
     {
         Assert.Throws<TriangleException>(() => Triangle.Kind(0, 0, 0));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Triangles_with_negative_sides_are_illegal()
     {
         Assert.Throws<TriangleException>(() => Triangle.Kind(3, 4, -5));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Triangles_violating_triangle_inequality_are_illegal()
     {
         Assert.Throws<TriangleException>(() => Triangle.Kind(1, 1, 3));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Triangles_violating_triangle_inequality_are_illegal_2()
     {
         Assert.Throws<TriangleException>(() => Triangle.Kind(2, 4, 2));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Triangles_violating_triangle_inequality_are_illegal_3()
     {
         Assert.Throws<TriangleException>(() => Triangle.Kind(7, 3, 2));
