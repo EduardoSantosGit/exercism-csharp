@@ -1,0 +1,11 @@
+C:\exercism\csharp\scrabble-score\bin\Debug\netcoreapp1.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\exercism\csharp\scrabble-score\bin\Debug\netcoreapp1.0\xunit.runner.utility.netstandard15.dll
+C:\exercism\csharp\scrabble-score\bin\Debug\netcoreapp1.0\xunit.runner.reporters.netstandard15.dll
+C:\exercism\csharp\scrabble-score\bin\Debug\netcoreapp1.0\ScrabbleScore.deps.json
+C:\exercism\csharp\scrabble-score\bin\Debug\netcoreapp1.0\ScrabbleScore.runtimeconfig.json
+C:\exercism\csharp\scrabble-score\bin\Debug\netcoreapp1.0\ScrabbleScore.runtimeconfig.dev.json
+C:\exercism\csharp\scrabble-score\bin\Debug\netcoreapp1.0\ScrabbleScore.dll
+C:\exercism\csharp\scrabble-score\bin\Debug\netcoreapp1.0\ScrabbleScore.pdb
+C:\exercism\csharp\scrabble-score\obj\Debug\netcoreapp1.0\ScrabbleScore.AssemblyInfo.cs
+C:\exercism\csharp\scrabble-score\obj\Debug\netcoreapp1.0\ScrabbleScore.dll
+C:\exercism\csharp\scrabble-score\obj\Debug\netcoreapp1.0\ScrabbleScore.pdb

@@ -1,0 +1,11 @@
+C:\exercism\csharp\proverb\bin\Debug\netcoreapp1.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\exercism\csharp\proverb\bin\Debug\netcoreapp1.0\xunit.runner.utility.netstandard15.dll
+C:\exercism\csharp\proverb\bin\Debug\netcoreapp1.0\xunit.runner.reporters.netstandard15.dll
+C:\exercism\csharp\proverb\bin\Debug\netcoreapp1.0\Proverb.deps.json
+C:\exercism\csharp\proverb\bin\Debug\netcoreapp1.0\Proverb.runtimeconfig.json
+C:\exercism\csharp\proverb\bin\Debug\netcoreapp1.0\Proverb.runtimeconfig.dev.json
+C:\exercism\csharp\proverb\bin\Debug\netcoreapp1.0\Proverb.dll
+C:\exercism\csharp\proverb\bin\Debug\netcoreapp1.0\Proverb.pdb
+C:\exercism\csharp\proverb\obj\Debug\netcoreapp1.0\Proverb.AssemblyInfo.cs
+C:\exercism\csharp\proverb\obj\Debug\netcoreapp1.0\Proverb.dll
+C:\exercism\csharp\proverb\obj\Debug\netcoreapp1.0\Proverb.pdb

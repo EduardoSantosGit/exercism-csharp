@@ -1,0 +1,11 @@
+C:\exercism\csharp\error-handling\bin\Debug\netcoreapp1.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\exercism\csharp\error-handling\bin\Debug\netcoreapp1.0\xunit.runner.utility.netstandard15.dll
+C:\exercism\csharp\error-handling\bin\Debug\netcoreapp1.0\xunit.runner.reporters.netstandard15.dll
+C:\exercism\csharp\error-handling\bin\Debug\netcoreapp1.0\ErrorHandling.deps.json
+C:\exercism\csharp\error-handling\bin\Debug\netcoreapp1.0\ErrorHandling.runtimeconfig.json
+C:\exercism\csharp\error-handling\bin\Debug\netcoreapp1.0\ErrorHandling.runtimeconfig.dev.json
+C:\exercism\csharp\error-handling\bin\Debug\netcoreapp1.0\ErrorHandling.dll
+C:\exercism\csharp\error-handling\bin\Debug\netcoreapp1.0\ErrorHandling.pdb
+C:\exercism\csharp\error-handling\obj\Debug\netcoreapp1.0\ErrorHandling.AssemblyInfo.cs
+C:\exercism\csharp\error-handling\obj\Debug\netcoreapp1.0\ErrorHandling.dll
+C:\exercism\csharp\error-handling\obj\Debug\netcoreapp1.0\ErrorHandling.pdb

@@ -1,0 +1,11 @@
+C:\exercism\csharp\strain\bin\Debug\netcoreapp1.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\exercism\csharp\strain\bin\Debug\netcoreapp1.0\xunit.runner.utility.netstandard15.dll
+C:\exercism\csharp\strain\bin\Debug\netcoreapp1.0\xunit.runner.reporters.netstandard15.dll
+C:\exercism\csharp\strain\bin\Debug\netcoreapp1.0\Strain.deps.json
+C:\exercism\csharp\strain\bin\Debug\netcoreapp1.0\Strain.runtimeconfig.json
+C:\exercism\csharp\strain\bin\Debug\netcoreapp1.0\Strain.runtimeconfig.dev.json
+C:\exercism\csharp\strain\bin\Debug\netcoreapp1.0\Strain.dll
+C:\exercism\csharp\strain\bin\Debug\netcoreapp1.0\Strain.pdb
+C:\exercism\csharp\strain\obj\Debug\netcoreapp1.0\Strain.AssemblyInfo.cs
+C:\exercism\csharp\strain\obj\Debug\netcoreapp1.0\Strain.dll
+C:\exercism\csharp\strain\obj\Debug\netcoreapp1.0\Strain.pdb

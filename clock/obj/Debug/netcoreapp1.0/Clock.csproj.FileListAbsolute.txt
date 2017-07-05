@@ -1,0 +1,11 @@
+C:\exercism\csharp\clock\bin\Debug\netcoreapp1.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\exercism\csharp\clock\bin\Debug\netcoreapp1.0\xunit.runner.utility.netstandard15.dll
+C:\exercism\csharp\clock\bin\Debug\netcoreapp1.0\xunit.runner.reporters.netstandard15.dll
+C:\exercism\csharp\clock\bin\Debug\netcoreapp1.0\Clock.deps.json
+C:\exercism\csharp\clock\bin\Debug\netcoreapp1.0\Clock.runtimeconfig.json
+C:\exercism\csharp\clock\bin\Debug\netcoreapp1.0\Clock.runtimeconfig.dev.json
+C:\exercism\csharp\clock\bin\Debug\netcoreapp1.0\Clock.dll
+C:\exercism\csharp\clock\bin\Debug\netcoreapp1.0\Clock.pdb
+C:\exercism\csharp\clock\obj\Debug\netcoreapp1.0\Clock.AssemblyInfo.cs
+C:\exercism\csharp\clock\obj\Debug\netcoreapp1.0\Clock.dll
+C:\exercism\csharp\clock\obj\Debug\netcoreapp1.0\Clock.pdb

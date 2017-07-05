@@ -1,0 +1,11 @@
+C:\exercism\csharp\phone-number\bin\Debug\netcoreapp1.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\exercism\csharp\phone-number\bin\Debug\netcoreapp1.0\xunit.runner.utility.netstandard15.dll
+C:\exercism\csharp\phone-number\bin\Debug\netcoreapp1.0\xunit.runner.reporters.netstandard15.dll
+C:\exercism\csharp\phone-number\bin\Debug\netcoreapp1.0\PhoneNumber.deps.json
+C:\exercism\csharp\phone-number\bin\Debug\netcoreapp1.0\PhoneNumber.runtimeconfig.json
+C:\exercism\csharp\phone-number\bin\Debug\netcoreapp1.0\PhoneNumber.runtimeconfig.dev.json
+C:\exercism\csharp\phone-number\bin\Debug\netcoreapp1.0\PhoneNumber.dll
+C:\exercism\csharp\phone-number\bin\Debug\netcoreapp1.0\PhoneNumber.pdb
+C:\exercism\csharp\phone-number\obj\Debug\netcoreapp1.0\PhoneNumber.AssemblyInfo.cs
+C:\exercism\csharp\phone-number\obj\Debug\netcoreapp1.0\PhoneNumber.dll
+C:\exercism\csharp\phone-number\obj\Debug\netcoreapp1.0\PhoneNumber.pdb
