@@ -44,19 +44,19 @@ public class TriangleTest
         Assert.Equal(TriangleKind.Scalene, Triangle.Kind(3, 4, 5));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Scalene_triangles_have_no_equal_sides_at_a_larger_scale_too()
     {
         Assert.Equal(TriangleKind.Scalene, Triangle.Kind(10, 11, 12));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Scalene_triangles_have_no_equal_sides_in_descending_order_either()
     {
         Assert.Equal(TriangleKind.Scalene, Triangle.Kind(5, 4, 2));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Very_small_triangles_are_legal()
     {
         Assert.Equal(TriangleKind.Scalene, Triangle.Kind(0.4m, 0.6m, 0.3m));
