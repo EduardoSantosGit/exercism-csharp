@@ -32,28 +32,28 @@ public class ClockTest
         Assert.Equal("11:03", clock.ToString());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Can_add_over_more_than_one_day()
     {
         var clock = new Clock(10).Add(7224);
         Assert.Equal("10:24", clock.ToString());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Can_subtract_minutes()
     {
         var clock = new Clock(10, 3).Subtract(3);
         Assert.Equal("10:00", clock.ToString());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Can_subtract_to_previous_hour()
     {
         var clock = new Clock(10, 3).Subtract(30);
         Assert.Equal("09:33", clock.ToString());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Can_subtract_over_an_hour()
     {
         var clock = new Clock(10, 3).Subtract(70);
