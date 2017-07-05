@@ -26,7 +26,6 @@ public class Clock
 
         return new Clock(startTime,  _totalMinutes -= minutesToSubtract);
     }
-
     
     public override string ToString()
     {   
