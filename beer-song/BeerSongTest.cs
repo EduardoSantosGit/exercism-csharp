@@ -34,7 +34,7 @@ public class BeerSongTest
         Assert.Equal(expected, BeerSong.Verse(2));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Verse_1()
     {
         var expected = 
@@ -44,7 +44,7 @@ public class BeerSongTest
         Assert.Equal(expected, BeerSong.Verse(1));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Verse_0()
     {
         var expected = 
