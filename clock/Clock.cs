@@ -2,51 +2,78 @@ using System;
 
 public class Clock 
 {   
-    private int hours;
-    private int minutes;
-    private string horas;
-    private string minutos;
-
+    private readonly TimeSpan _timeSpanOneDay = TimeSpan.FromTicks(TimeSpan.TicksPerDay);
+    private TimeSpan _time;
+    private int _hora;
+    private int _minuto;
     public Clock(int hours)
     {
-       this.hours = hours;
+       _time = new TimeSpan(hours, 0, 0);
+       _hora = hours;
     }
 
     public Clock(int hours, int minutes)
     {
-       this.hours = hours;
-       this.minutes = minutes;
+      _time = new TimeSpan(hours, minutes, 0);
+      _hora = hours;
+      _minuto = minutes;
     }
 
     public Clock Add(int minutesToAdd)
-    {
-         this.minutes = this.minutes + minutesToAdd;
-         Clock clock = new Clock(this.hours, this.minutes);
-
-         new TimeSpan();
-
-         return clock;
+    {   
+        Clock clock = new Clock(_hora,_minuto + minutesToAdd);
+        return clock;
     }
 
     public Clock Subtract(int minutesToSubtract)
     {   
-        throw new NotImplementedException("You need to implement this function.");
-    } 
+        Clock clock = new Clock(_hora,_minuto - minutesToSubtract);
+        return clock;
+    }
+
+    public override string ToString(){
+       return _time.ToString(@"hh\:mm");
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 
     public void calculaHora(){
 
-        if(this.hours <= 9){
-            this.horas = "0" + hours.ToString();
+        if(this._hours <= 9){
+            this.horas = "0" + _hours.ToString();
         }
         else {
-            this.horas = hours.ToString();
+            this.horas = _hours.ToString();
         }
-        if(this.minutes > 0){
-            if(this.minutes <= 9){
-                this.minutos = "0" + this.minutes.ToString();
+        if(_minutes > 0){
+            if(_minutes <= 9){
+                this.minutos = "0" + _minutes.ToString();
             }
             else {
-                this.minutos = this.minutes.ToString();
+                this.minutos = _minutes.ToString();
             }
         }
         else {
@@ -58,11 +85,12 @@ public class Clock
     }
 
     public void ajustaHora(){
-        if(this.minutes > 60){
-            int divisao = this.minutes / 60;
-            int restante = 0;
+         int divisao = 0;
+         int restante = 0; 
+        if(_minutes > 59){
+            divisao = _minutes / 60;
             for(int i=1;i<divisao+1;i++){
-                restante = this.minutes - (60 * i);
+                restante = _minutes - (60 * i);
             }
             if(divisao > 24){
                 int diasMais = divisao / 24;
@@ -70,17 +98,16 @@ public class Clock
                 for(int i=1;i<diasMais;i++){
                     horasRestantes = divisao - (24 * i);
                 }
-                this.hours = this.hours + horasRestantes;
-                this.minutes = restante;
+                this._hours = this._hours + horasRestantes;
+                _minutes = restante;
             }
             else {
-                this.hours = this.hours + divisao;
-                this.minutes = restante;
+                this._hours = this._hours + divisao;
+                _minutes = restante;
             }
-            
         }
-        if(this.hours > 24){
-            this.hours = this.hours - 24;
+        if(this._hours > 24){
+            this._hours = this._hours - 24;
         }
     }
 
@@ -89,4 +116,4 @@ public class Clock
         calculaHora();
         return this.horas + ":" + this.minutos;
     }
-}
+}*/
