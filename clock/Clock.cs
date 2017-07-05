@@ -1,7 +1,7 @@
 using System;
 
 public class Clock 
-{
+{   
     private int hours;
     private int minutes;
     private string horas;
@@ -22,13 +22,16 @@ public class Clock
     {
          this.minutes = this.minutes + minutesToAdd;
          Clock clock = new Clock(this.hours, this.minutes);
+
+         new TimeSpan();
+
          return clock;
     }
 
     public Clock Subtract(int minutesToSubtract)
-    {
+    {   
         throw new NotImplementedException("You need to implement this function.");
-    }
+    } 
 
     public void calculaHora(){
 
@@ -49,25 +52,25 @@ public class Clock
         else {
                 this.minutos = "00";
         }
-
     }
 
     public void ajustaHora(){
+        if(this.minutes > 60){
+            int divisao = this.minutes / 60;
+            int restante = 0;
+            for(int i=0;i<divisao;i++){
+                restante = this.minutes - 60;
+            }
+            this.hours = this.hours + divisao;
+            this.minutes = restante;
+        }
         if(this.hours > 24){
             this.hours = this.hours - 24;
-        }
-        if(this.minutes > 60){
-            if(this.minutes % 60 == 0){
-                int divisao = this.minutes / 60;
-                this.hours = this.hours + divisao;
-            }
-            else {
-                
-            }        
         }
     }
 
     public override string ToString(){
+        ajustaHora();
         calculaHora();
         return this.horas + ":" + this.minutos;
     }
