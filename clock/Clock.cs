@@ -52,17 +52,32 @@ public class Clock
         else {
                 this.minutos = "00";
         }
+        if(this.horas == "24"){
+            this.horas = "00";
+        }
     }
 
     public void ajustaHora(){
         if(this.minutes > 60){
             int divisao = this.minutes / 60;
             int restante = 0;
-            for(int i=0;i<divisao;i++){
-                restante = this.minutes - 60;
+            for(int i=1;i<divisao+1;i++){
+                restante = this.minutes - (60 * i);
             }
-            this.hours = this.hours + divisao;
-            this.minutes = restante;
+            if(divisao > 24){
+                int diasMais = divisao / 24;
+                int horasRestantes = 0;
+                for(int i=1;i<diasMais;i++){
+                    horasRestantes = divisao - (24 * i);
+                }
+                this.hours = this.hours + horasRestantes;
+                this.minutes = restante;
+            }
+            else {
+                this.hours = this.hours + divisao;
+                this.minutes = restante;
+            }
+            
         }
         if(this.hours > 24){
             this.hours = this.hours - 24;

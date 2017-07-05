@@ -32,7 +32,7 @@ public class ClockTest
         Assert.Equal("11:03", clock.ToString());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Can_add_over_more_than_one_day()
     {
         var clock = new Clock(10).Add(7224);
@@ -60,7 +60,7 @@ public class ClockTest
         Assert.Equal("08:53", clock.ToString());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Wraps_around_midnight()
     {
         var clock = new Clock(23, 59).Add(2);
