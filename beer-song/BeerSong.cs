@@ -20,11 +20,17 @@ public static class BeerSong
         string frase = "";
         int contador = begin - end;
         for(int i=0;i<=contador;i++){
-            if(i == 0){
-                frase += montaPrimeiraLinha(begin - i) + "\n" + montaSegundaLinha(begin - i) + "\n";
+            if(begin-i != 0){
+                if(i == 0){
+                    frase += montaPrimeiraLinha(begin - i) + "\n" + montaSegundaLinha(begin - i) + "\n";
+                }
+                else {
+                    frase += "\n" + montaPrimeiraLinha(begin - i) + "\n" + montaSegundaLinha(begin - i) + "\n";
+                }
             }
             else {
-                frase += "\n" + montaPrimeiraLinha(begin - i) + "\n" + montaSegundaLinha(begin - i) + "\n";
+                frase += "\n" + "No more bottles of beer on the wall, no more bottles of beer.\n" +
+                            "Go to the store and buy some more, 99 bottles of beer on the wall.\n";
             }
         }
         return frase;
@@ -42,6 +48,7 @@ public static class BeerSong
     }
 
     public static string montaSegundaLinha(int num){
+       
        string linha = "Take one down and pass it around, 00 bottles of beer on the wall.";
        int aux = num-1;
 
