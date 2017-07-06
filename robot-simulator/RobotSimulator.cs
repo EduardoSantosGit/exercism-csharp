@@ -31,6 +31,8 @@ public class RobotSimulator
     {
         this.bearing = bearing;
         this.coordinate = coordinate;
+        x = coordinate.X;
+        y = coordinate.Y;
     }
 
     public Bearing Bearing
@@ -54,13 +56,13 @@ public class RobotSimulator
         if(bearing == Bearing.North){
             bearing = Bearing.East;
         }
-        if(bearing == Bearing.East){
+        else if(bearing == Bearing.East){
             bearing = Bearing.South;
         }
-        if(bearing == Bearing.South){
+        else if(bearing == Bearing.South){
             bearing = Bearing.West;
         }
-        if(bearing == Bearing.West){
+        else if(bearing == Bearing.West){
             bearing = Bearing.North;
         }
     }
@@ -70,25 +72,36 @@ public class RobotSimulator
         if(bearing == Bearing.North){
             bearing = Bearing.West;
         }
-        if(bearing == Bearing.East){
+        else if(bearing == Bearing.East){
             bearing = Bearing.North;
         }
-        if(bearing == Bearing.South){
+        else if(bearing == Bearing.South){
             bearing = Bearing.East;
         }
-        if(bearing == Bearing.West){
+        else if(bearing == Bearing.West){
             bearing = Bearing.South;
         }
     }
 
     public void Advance()
     {
-        x = x + coordinate.X;
-        y = y + coordinate.Y;
+        x = x + 1;
+        y = y + 1;
     }
 
     public void Simulate(string instructions)
-    {
-        throw new NotImplementedException("You need to implement this function.");
+    {   
+        string teste = instructions.Replace("AA","A");
+        for(int i=0;i<teste.Length;i++){
+            if(teste[i].Equals("L")){
+                TurnLeft();
+            }
+            else if (teste[i].Equals("R")){
+                TurnRight();
+            }
+            else if (teste[i].Equals("A")){
+                Advance();
+            }
+        }
     }
 }

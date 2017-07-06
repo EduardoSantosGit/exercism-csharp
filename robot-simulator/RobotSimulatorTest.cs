@@ -18,7 +18,7 @@ public class RobotSimulatorTest
         Assert.Equal(Bearing.West, robot.Bearing);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Robbie()
     {
         var robbie = new RobotSimulator(Bearing.East, new Coordinate(-2, 1));
