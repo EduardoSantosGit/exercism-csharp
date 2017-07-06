@@ -37,7 +37,7 @@ public class BinarySearchTest
         Assert.Equal(7, BinarySearch.Search(input, 2002));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Should_find_elements_at_the_beginning_of_an_array()
     {
         var input = new[] { 6, 67, 123, 345, 456, 457, 490, 2002, 54321, 54322 };
