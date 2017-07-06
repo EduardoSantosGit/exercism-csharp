@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public enum Plant
 {
@@ -10,72 +11,36 @@ public enum Plant
 }
 
 public class Garden
-    {
-    private List<string> inomes = new List<string>();
-    private string iniPlantas;    
+{
+    private readonly List<string> _children = null;
+    private readonly string[] _windowSills;
+    private static readonly Dictionary<char, Plant> _plants = 
+        Enum.GetNames(typeof(Plant)).ToDictionary(e => e[0], l => (Plant)Enum.Parse(typeof(Plant), l));
+
     public Garden(IEnumerable<string> children, string windowSills)
     {
-       inomes.AddRange(children);
-       iniPlantas = windowSills;
+        _children = children.ToList();
+        _windowSills = windowSills.Split('\n');
+        _children.Sort();
     }
 
     public IEnumerable<Plant> GetPlants(string child)
     {
-        Dictionary<string,Plant> hashPlantas = new Dictionary<string,Plant>();
-        List<Plant> plantasL1 = new List<Plant>();
-        List<Plant> plantasL2 = new List<Plant>();
-        List<Plant> plantas = new List<Plant>();
+        var idxChild = _children.IndexOf(child);
+        if (idxChild < 0)
+            return Enumerable.Empty<Plant>();
 
-        hashPlantas.Add("V",Plant.Violets);
-        hashPlantas.Add("R",Plant.Radishes);
-        hashPlantas.Add("C",Plant.Clover);
-        hashPlantas.Add("G",Plant.Grass);
+        idxChild = idxChild * 2;
 
-        List<string> p1 = new List<string>();
-        List<string> p2 = new List<string>();
+        var chars = _windowSills[0].Substring(idxChild, 2)
+                    + _windowSills[1].Substring(idxChild, 2);
 
-        int quebra = iniPlantas.IndexOf("\n");
-        string linha1 = iniPlantas.Substring(0,quebra);
-        string linha2 = iniPlantas.Substring(quebra+1,iniPlantas.Length-quebra-1);
-        int pos = 0;
-
-       inomes.Sort();
-
-       if(!inomes.Contains(child)){
-           return plantas.ToArray();
-       }
-
-       for(int i=0;i<inomes.Count;i++){
-           if(inomes[i] == child){
-              pos = i;
-           }
-       }
-       pos = pos * 2;
-       
-       string letras1 = linha1.Substring(pos,2);
-       string letras2 = linha2.Substring(pos,2);
-
-       for(int i=0;i<letras1.Length;i++){
-          foreach(var item in hashPlantas){
-              if(item.Key == letras1[i].ToString()){
-                 plantas.Add(item.Value);
-              }
-          }
-       }
-
-       for(int i=0;i<letras2.Length;i++){
-          foreach(var item in hashPlantas){
-              if(item.Key == letras2[i].ToString()){
-                 plantas.Add(item.Value);
-              }
-          }
-       }
-       return plantas;
+        return chars.Select(chr => _plants[chr]);
     }
 
     public static Garden DefaultGarden(string windowSills)
-    {   
-        var garden = new Garden(new [] { "Alice", "Bob", "Charlie", "David",
+    {
+        var garden = new Garden(new[] { "Alice", "Bob", "Charlie", "David",
         "Eve","Fred","Ginny","Harriet", "Ileana","Joseph","Kincaid","Larry"}, windowSills);
         return garden;
     }
