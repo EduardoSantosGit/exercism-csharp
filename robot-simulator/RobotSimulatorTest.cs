@@ -10,7 +10,7 @@ public class RobotSimulatorTest
         Assert.Equal(Bearing.North, robot.Bearing);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Turn_left_edge_case()
     {
         var robot = new RobotSimulator(Bearing.North, new Coordinate(0, 0));

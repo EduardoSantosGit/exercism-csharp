@@ -21,16 +21,23 @@ public struct Coordinate
 }
 
 public class RobotSimulator
-{
+{   
+    private Bearing bearing;
+    private Coordinate coordinate;
+    private int x;
+    private int y;
+
     public RobotSimulator(Bearing bearing, Coordinate coordinate)
     {
+        this.bearing = bearing;
+        this.coordinate = coordinate;
     }
 
     public Bearing Bearing
     {
         get
         {
-            throw new NotImplementedException("You need to implement this function.");
+            return bearing;
         }
     }
 
@@ -38,23 +45,46 @@ public class RobotSimulator
     {
         get
         {
-            throw new NotImplementedException("You need to implement this function.");
+            return new Coordinate(x,y);
         }
     }
 
     public void TurnRight()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        if(bearing == Bearing.North){
+            bearing = Bearing.East;
+        }
+        if(bearing == Bearing.East){
+            bearing = Bearing.South;
+        }
+        if(bearing == Bearing.South){
+            bearing = Bearing.West;
+        }
+        if(bearing == Bearing.West){
+            bearing = Bearing.North;
+        }
     }
 
     public void TurnLeft()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        if(bearing == Bearing.North){
+            bearing = Bearing.West;
+        }
+        if(bearing == Bearing.East){
+            bearing = Bearing.North;
+        }
+        if(bearing == Bearing.South){
+            bearing = Bearing.East;
+        }
+        if(bearing == Bearing.West){
+            bearing = Bearing.South;
+        }
     }
 
     public void Advance()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        x = x + coordinate.X;
+        y = y + coordinate.Y;
     }
 
     public void Simulate(string instructions)
