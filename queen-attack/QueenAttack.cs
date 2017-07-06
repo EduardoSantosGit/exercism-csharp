@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class Queen
 {
@@ -15,11 +16,28 @@ public class Queen
 public static class Queens
 {
     public static bool CanAttack(Queen white, Queen black){
+
+        Dictionary<int, int> tabuleiro = new Dictionary<int, int>();
+        bool resposta = false;
+        for(int i =0;i<=8;i++){
+            for(int j=0;j<=8;j++){
+                tabuleiro.Add(i,j);
+            }
+        }
+
+        if(white.Row == black.Row){
+            resposta = true;        
+        }
+        if(white.Column == black.Column){
+            resposta = true;
+        }
+
         if(white.Row == black.Row){
             if(white.Column == black.Column){
                 throw new ArgumentException();
             }
         }
-        return false;
+
+        return resposta;
     }
 }
