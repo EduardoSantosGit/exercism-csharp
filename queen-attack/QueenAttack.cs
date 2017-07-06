@@ -15,44 +15,54 @@ public class Queen
 
 public static class Queens
 {
-    public static bool CanAttack(Queen white, Queen black){
+    public static bool CanAttack(Queen white, Queen black)
+    {
 
         List<int> lstRow = new List<int>();
         List<int> lstColumn = new List<int>();
 
         bool resposta = false;
-        
-        for(int i =0;i<=7;i++){
+
+        for (int i = 0; i <= 7; i++)
+        {
             lstRow.Add(i);
         }
-        for(int i=0;i<=7;i++){
+        for (int i = 0; i <= 7; i++)
+        {
             lstColumn.Add(i);
         }
 
-        if(white.Row == black.Row){
-            resposta = true;        
+        if (white.Row == black.Row)
+        {
+            resposta = true;
         }
-        if(white.Column == black.Column){
+        if (white.Column == black.Column)
+        {
             resposta = true;
         }
 
-        if(white.Row == black.Row){
-            if(white.Column == black.Column){
+        if (white.Row == black.Row)
+        {
+            if (white.Column == black.Column)
+            {
                 throw new ArgumentException();
             }
         }
-        
+
         int row = white.Row - black.Row;
         int column = white.Column - black.Column;
 
-        if(row < 0){
-            row  = row * -1;
+        if (row < 0)
+        {
+            row = row * -1;
         }
-        if(column < 0){
+        if (column < 0)
+        {
             column = column * -1;
         }
 
-        if(row == column){
+        if (row == column)
+        {
             resposta = true;
         }
 
