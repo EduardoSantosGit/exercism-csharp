@@ -22,10 +22,10 @@ public static class Queens
 
         bool resposta = false;
         
-        for(int i =1;i<=8;i++){
+        for(int i =0;i<=7;i++){
             lstRow.Add(i);
         }
-        for(int i=1;i<=8;i++){
+        for(int i=0;i<=7;i++){
             lstColumn.Add(i);
         }
 
@@ -40,6 +40,13 @@ public static class Queens
             if(white.Column == black.Column){
                 throw new ArgumentException();
             }
+        }
+        
+        int row = white.Row - black.Row;
+        int column = white.Column - black.Column;
+
+        if(row == column){
+            resposta = true;
         }
 
         return resposta;
