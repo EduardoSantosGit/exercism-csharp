@@ -5,27 +5,25 @@ public static class Sieve
 {
     public static int[] Primes(int limit)
     {
-        List<bool> primos = new List<bool>();
-        List<int> result = new List<int>();
+        List<int> numeros = new List<int>();
+        List<int> primos = new List<int>();
 
-        for(int i=0;i<=limit;i++){
-            primos.Add(true);
+        for(var i = 2; i <= limit; i++){
+            numeros.Add(i);
         }
-         
-        for(int p = 2; p*p <=limit; p++)
-        {
-            if(primos[p] == true)
+        foreach(int item in numeros){
+            bool primo = true;
+            foreach(var e in primos)
             {
-                for(int i = p*2; i <= limit; i += p)
-                    primos.Add(false);
+                if(item % e == 0)
+                {
+                    primo = false;
+                }
             }
+            if(primo){
+                primos.Add(item);
+            }    
         }
-        for(int i = 2; i <= limit; i++)
-        {
-            if(primos[i] == true)
-               result.Add(i);
-        }
-
-        return result.ToArray();
+        return primos.ToArray();
     }
 }
