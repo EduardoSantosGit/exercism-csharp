@@ -3,8 +3,7 @@ using System.Collections.Generic;
 
 public static class Sieve
 {
-    public static int[] Primes(int limit)
-    {
+    public static int[] Primes(int limit){
         List<int> numeros = new List<int>();
         List<int> primos = new List<int>();
 
