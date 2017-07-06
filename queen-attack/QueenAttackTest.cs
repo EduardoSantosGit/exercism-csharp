@@ -11,7 +11,7 @@ public class QueenAttackTest
         Assert.Throws<ArgumentException>(() => Queens.CanAttack(white, black));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Cannot_attack()
     {
         Assert.False(Queens.CanAttack(new Queen(2, 3), new Queen(4, 7)));

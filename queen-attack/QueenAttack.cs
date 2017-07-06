@@ -17,12 +17,16 @@ public static class Queens
 {
     public static bool CanAttack(Queen white, Queen black){
 
-        Dictionary<int, int> tabuleiro = new Dictionary<int, int>();
+        List<int> lstRow = new List<int>();
+        List<int> lstColumn = new List<int>();
+
         bool resposta = false;
-        for(int i =0;i<=8;i++){
-            for(int j=0;j<=8;j++){
-                tabuleiro.Add(i,j);
-            }
+        
+        for(int i =1;i<=8;i++){
+            lstRow.Add(i);
+        }
+        for(int i=1;i<=8;i++){
+            lstColumn.Add(i);
         }
 
         if(white.Row == black.Row){
