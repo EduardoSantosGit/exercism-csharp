@@ -44,21 +44,21 @@ public class BinarySearchTest
         Assert.Equal(0, BinarySearch.Search(input, 6));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Should_find_elements_at_the_end_of_an_array()
     {
         var input = new[] { 6, 67, 123, 345, 456, 457, 490, 2002, 54321, 54322 };
         Assert.Equal(9, BinarySearch.Search(input, 54322));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Should_return_minus_one_if_a_value_is_less_than_all_elements_in_a_long_array()
     {
         var input = new[] { 6, 67, 123, 345, 456, 457, 490, 2002, 54321, 54322 };
         Assert.Equal(-1, BinarySearch.Search(input, 2));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Should_return_minus_one_if_a_value_is_greater_than_all_elements_in_a_long_array()
     {
         var input = new[] { 6, 67, 123, 345, 456, 457, 490, 2002, 54321, 54322 };
