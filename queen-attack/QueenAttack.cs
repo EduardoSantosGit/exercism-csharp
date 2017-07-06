@@ -45,6 +45,13 @@ public static class Queens
         int row = white.Row - black.Row;
         int column = white.Column - black.Column;
 
+        if(row < 0){
+            row  = row * -1;
+        }
+        if(column < 0){
+            column = column * -1;
+        }
+
         if(row == column){
             resposta = true;
         }
