@@ -9,7 +9,7 @@ public class BinarySearchTest
         Assert.Equal(-1, BinarySearch.Search(input, 6));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Should_be_able_to_find_a_value_in_a_single_element_array_with_one_access()
     {
         var input = new[] { 6 };
