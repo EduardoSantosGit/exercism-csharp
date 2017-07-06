@@ -12,21 +12,17 @@ public static class BinarySearch
                     retorno = meio;
                 }
                 else {
-                    if(input[meio] > target){
-                        for(int i=0;i<meio;i++){
-                            if(input[i] == target){
-                                retorno = i;
-                            } else{
-                                retorno = -1;
-                            }
-                        }
-                    }
-                    else {
+                    if(target > input[meio]){
                         for(int i=meio;i<input.Length;i++){
                             if(input[i] == target){
                                 retorno = i;
-                            } else{
-                                retorno = -1;
+                            } 
+                        }
+                    }
+                    else {
+                        for(int i=0;i<meio;i++){
+                            if(input[i] == target){
+                                retorno = i;
                             }
                         }
                     }
@@ -34,7 +30,7 @@ public static class BinarySearch
             }
             else {
                 if(input.Length > 2){
-                    
+                    retorno = -3;
                 }
                 else {
                     for(int i=0;i<input.Length;i++){
@@ -51,6 +47,7 @@ public static class BinarySearch
         else {
             retorno = -1;
         }
+
         return retorno;
     }
 }

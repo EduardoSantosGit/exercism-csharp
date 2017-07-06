@@ -30,7 +30,7 @@ public class BinarySearchTest
         Assert.Equal(-1, BinarySearch.Search(input, 602));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Should_find_an_element_in_a_longer_array()
     {
         var input = new[] { 6, 67, 123, 345, 456, 457, 490, 2002, 54321, 54322 };
