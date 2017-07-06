@@ -16,14 +16,14 @@ public class BinarySearchTest
         Assert.Equal(0, BinarySearch.Search(input, 6));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Should_return_minus_one_if_a_value_is_less_than_the_element_in_a_single_element_array()
     {
         var input = new[] { 94 };
         Assert.Equal(-1, BinarySearch.Search(input, 6));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Should_return_minus_one_if_a_value_is_greater_than_the_element_in_a_single_element_array()
     {
         var input = new[] { 94 };
