@@ -23,7 +23,7 @@ public class QueenAttackTest
         Assert.True(Queens.CanAttack(new Queen(2, 4), new Queen(2, 7)));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Can_attack_on_same_column()
     {
         Assert.True(Queens.CanAttack(new Queen(5, 4), new Queen(2, 4)));
