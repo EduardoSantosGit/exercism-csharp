@@ -14,8 +14,12 @@ public class Queen
 
 public static class Queens
 {
-    public static bool CanAttack(Queen white, Queen black)
-    {
-        throw new NotImplementedException("You need to implement this function.");
+    public static bool CanAttack(Queen white, Queen black){
+        if(white.Row == black.Row){
+            if(white.Column == black.Column){
+                throw new ArgumentException();
+            }
+        }
+        return false;
     }
 }
