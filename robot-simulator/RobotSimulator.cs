@@ -39,7 +39,7 @@ public class RobotSimulator
     {
         get
         {
-            return bearing;
+            return this.bearing;
         }
     }
 
@@ -53,53 +53,56 @@ public class RobotSimulator
 
     public void TurnRight()
     {
-        if(bearing == Bearing.North){
-            bearing = Bearing.East;
+        if(this.bearing == Bearing.North){
+            this.bearing = Bearing.East;
         }
-        else if(bearing == Bearing.East){
-            bearing = Bearing.South;
+        else if(this.bearing == Bearing.East){
+            this.bearing = Bearing.South;
         }
-        else if(bearing == Bearing.South){
-            bearing = Bearing.West;
+        else if(this.bearing == Bearing.South){
+            this.bearing = Bearing.West;
         }
-        else if(bearing == Bearing.West){
-            bearing = Bearing.North;
+        else if(this.bearing == Bearing.West){
+            this.bearing = Bearing.North;
         }
     }
 
     public void TurnLeft()
     {
-        if(bearing == Bearing.North){
-            bearing = Bearing.West;
+        if(this.bearing == Bearing.North){
+            this.bearing = Bearing.West;
         }
-        else if(bearing == Bearing.East){
-            bearing = Bearing.North;
+        else if(this.bearing == Bearing.East){
+            this.bearing = Bearing.North;
         }
-        else if(bearing == Bearing.South){
-            bearing = Bearing.East;
+        else if(this.bearing == Bearing.South){
+           this.bearing = Bearing.East;
         }
-        else if(bearing == Bearing.West){
-            bearing = Bearing.South;
+        else if(this.bearing == Bearing.West){
+            this.bearing = Bearing.South;
         }
     }
 
     public void Advance()
-    {
-        x = x + 1;
-        y = y + 1;
+    {   
+        if(this.bearing == Bearing.North || this.bearing == Bearing.South){
+            y = y + 1;
+        }
+        else if (this.bearing == Bearing.West || this.bearing == Bearing.East){
+           x = x + 1;
+        }
     }
 
     public void Simulate(string instructions)
     {   
-        string teste = instructions.Replace("AA","A");
-        for(int i=0;i<teste.Length;i++){
-            if(teste[i].Equals("L")){
+        for(int i=0;i<instructions.Length;i++){
+            if(instructions[i] == 'L'){
                 TurnLeft();
             }
-            else if (teste[i].Equals("R")){
+            else if (instructions[i] == 'R'){
                 TurnRight();
             }
-            else if (teste[i].Equals("A")){
+            else if (instructions[i] == 'A'){
                 Advance();
             }
         }
