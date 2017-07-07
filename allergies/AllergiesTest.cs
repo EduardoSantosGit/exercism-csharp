@@ -35,7 +35,7 @@ public class AllergiesTest
         Assert.Empty(allergies.List());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Allergic_to_just_eggs()
     {
         var allergies = new Allergies(1);
