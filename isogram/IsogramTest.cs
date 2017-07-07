@@ -46,7 +46,7 @@ public class IsogramTest
         Assert.True(Isogram.IsIsogram("Hjelmqvist-Gryb-Zock-Pfund-Wax"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Made_up_name_that_is_an_isogram()
     {
         Assert.True(Isogram.IsIsogram("Emily Jung Schwartzkopf"));
