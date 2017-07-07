@@ -10,7 +10,7 @@ public class IsogramTest
         Assert.True(Isogram.IsIsogram(""));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Isogram_with_only_lower_case_characters()
     {
         Assert.True(Isogram.IsIsogram("isogram"));
