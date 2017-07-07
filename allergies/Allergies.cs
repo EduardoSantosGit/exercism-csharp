@@ -31,6 +31,12 @@ public class Allergies
 
     public IList<string> List()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        var _lstAllergies = new List<string>();
+        foreach(var item in _allergies){
+            if(_mask >= item.Key){
+                _lstAllergies.Add(item.Value);
+            }
+        }
+        return _lstAllergies;
     }
 }

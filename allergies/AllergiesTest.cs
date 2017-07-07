@@ -28,7 +28,7 @@ public class AllergiesTest
         Assert.False(allergies.AllergicTo("strawberries"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void No_allergies_at_all()
     {
         var allergies = new Allergies(0);
