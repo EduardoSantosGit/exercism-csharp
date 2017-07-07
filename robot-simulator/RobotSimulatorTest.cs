@@ -39,7 +39,7 @@ public class RobotSimulatorTest
         Assert.Equal(new Coordinate(-4, 1), clutz.Coordinate);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Sphero()
     {
         var sphero = new RobotSimulator(Bearing.East, new Coordinate(2, -7));
