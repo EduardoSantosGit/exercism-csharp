@@ -48,7 +48,7 @@ public class RobotSimulatorTest
         Assert.Equal(new Coordinate(-3, -8), sphero.Coordinate);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Roomba()
     {
         var roomba = new RobotSimulator(Bearing.South, new Coordinate(8, 4));
