@@ -40,7 +40,7 @@ public class IsogramTest
         Assert.True(Isogram.IsIsogram("thumbscrew-japingly"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Isogram_with_duplicated_non_letter_character()
     {
         Assert.True(Isogram.IsIsogram("Hjelmqvist-Gryb-Zock-Pfund-Wax"));
