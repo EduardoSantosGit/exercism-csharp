@@ -22,7 +22,7 @@ public class IsogramTest
         Assert.False(Isogram.IsIsogram("eleven"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Longest_reported_english_isogram()
     {
         Assert.True(Isogram.IsIsogram("subdermatoglyphic"));
