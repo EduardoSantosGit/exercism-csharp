@@ -28,7 +28,7 @@ public class IsogramTest
         Assert.True(Isogram.IsIsogram("subdermatoglyphic"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Word_with_duplicated_character_in_mixed_case()
     {
         Assert.False(Isogram.IsIsogram("Alphabet"));
