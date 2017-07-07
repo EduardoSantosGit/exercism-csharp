@@ -19,7 +19,7 @@ public class AllergiesTest
         Assert.True(allergies.AllergicTo("eggs"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Allergic_to_eggs_in_addition_to_other_stuff()
     {
         var allergies = new Allergies(5);
