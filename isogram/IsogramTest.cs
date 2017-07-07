@@ -16,7 +16,7 @@ public class IsogramTest
         Assert.True(Isogram.IsIsogram("isogram"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Word_with_one_duplicated_character()
     {
         Assert.False(Isogram.IsIsogram("eleven"));
