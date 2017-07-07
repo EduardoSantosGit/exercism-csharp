@@ -4,24 +4,34 @@ using System.Linq;
 
 public static class SecretHandshake
 {
-    private static readonly Dictionary<int, string> _secrets = new Dictionary<int, string>()
-                   {{1,"wink"}, {10,"double blink"},{100,"close your eyes"}, {1000,"jump"}};
     private static List<string> _shakes = new List<string>();               
-    private static string _numberBinary;
     public static string[] Commands(int commandValue)
     {   
-        while (commandValue > 0)
-        {
-            var _rest = (commandValue % 2);
-            _numberBinary = _numberBinary + _rest.ToString();
-            commandValue = commandValue / 2;
-        }
-        _numberBinary = new string(_numberBinary.ToCharArray().Reverse().ToArray());
-        foreach(var item in _secrets){
-            if(Convert.ToInt32(_numberBinary) >= item.Key){
-                _shakes.Add(item.Value);
+        var response = new List<string>();
+            var reverse = false;
+            if (commandValue >= 16){
+                reverse = true;
+                commandValue -= 16;
             }
-        }
-        return _shakes.ToArray();
+            if (commandValue >= 8){
+                response.Add("jump");
+                commandValue -= 8;
+            }
+            if (commandValue >= 4){
+                response.Add("close your eyes");
+                commandValue -= 4;
+            }
+            if (commandValue >= 2){
+                response.Add("double blink");
+                commandValue -= 2;
+            }
+            if (commandValue == 1){
+                response.Add("wink");
+            }
+            if (reverse) {
+                return response.ToArray();
+            }    
+            response.Reverse();
+            return response.ToArray();
     }
 }
