@@ -85,11 +85,17 @@ public class RobotSimulator
 
     public void Advance()
     {   
-        if(this.bearing == Bearing.North || this.bearing == Bearing.South){
+        if(this.bearing == Bearing.North){
             y = y + 1;
         }
-        else if (this.bearing == Bearing.West || this.bearing == Bearing.East){
+        else if (this.bearing == Bearing.South){
+            y = y - 1;
+        }
+        else if (this.bearing == Bearing.East){
            x = x + 1;
+        }
+        else if (this.bearing == Bearing.West){
+           x = x - 1; 
         }
     }
 

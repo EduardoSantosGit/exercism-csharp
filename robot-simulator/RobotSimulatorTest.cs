@@ -30,7 +30,7 @@ public class RobotSimulatorTest
         Assert.Equal(new Coordinate(0, 2), robbie.Coordinate);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Clutz()
     {
         var clutz = new RobotSimulator(Bearing.North, new Coordinate(0, 0));
