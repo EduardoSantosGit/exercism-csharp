@@ -34,7 +34,7 @@ public class IsogramTest
         Assert.False(Isogram.IsIsogram("Alphabet"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Hypothetical_isogrammic_word_with_hyphen()
     {
         Assert.True(Isogram.IsIsogram("thumbscrew-japingly"));
