@@ -33,8 +33,11 @@ public class Allergies
     {
         var _lstAllergies = new List<string>();
         foreach(var item in _allergies){
-            if(_mask >= item.Key){
-                _lstAllergies.Add(item.Value);
+            if(_mask > 0){
+                if(_mask >= item.Key){
+                    _lstAllergies.Add(item.Value);
+                    _mask = _mask - item.Key;
+                }
             }
         }
         return _lstAllergies;
