@@ -7,31 +7,31 @@ public static class SecretHandshake
     private static List<string> _shakes = new List<string>();               
     public static string[] Commands(int commandValue)
     {   
-        var response = new List<string>();
+        var _shakes = new List<string>();
             var reverse = false;
             if (commandValue >= 16){
                 reverse = true;
                 commandValue -= 16;
             }
             if (commandValue >= 8){
-                response.Add("jump");
+                _shakes.Add("jump");
                 commandValue -= 8;
             }
             if (commandValue >= 4){
-                response.Add("close your eyes");
+                _shakes.Add("close your eyes");
                 commandValue -= 4;
             }
             if (commandValue >= 2){
-                response.Add("double blink");
+                _shakes.Add("double blink");
                 commandValue -= 2;
             }
             if (commandValue == 1){
-                response.Add("wink");
+                _shakes.Add("wink");
             }
             if (reverse) {
-                return response.ToArray();
+                return _shakes.ToArray();
             }    
-            response.Reverse();
-            return response.ToArray();
+            _shakes.Reverse();
+            return _shakes.ToArray();
     }
 }

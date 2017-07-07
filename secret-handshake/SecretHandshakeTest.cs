@@ -26,7 +26,7 @@ public class SecretHandshakeTests
         Assert.Equal(new[] { "jump" }, SecretHandshake.Commands(8));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Test_handshake_11_to_wink_and_double_blink()
     {
         Assert.Equal(new[] { "wink", "double blink" }, SecretHandshake.Commands(3));
