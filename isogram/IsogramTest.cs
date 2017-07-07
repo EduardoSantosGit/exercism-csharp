@@ -52,7 +52,7 @@ public class IsogramTest
         Assert.True(Isogram.IsIsogram("Emily Jung Schwartzkopf"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Duplicated_character_in_the_middle()
     {
         Assert.False(Isogram.IsIsogram("accentor"));
