@@ -30,7 +30,8 @@ public class Allergies
     }
 
     public IList<string> List()
-    {
+    {   
+        int cont = 0;    
         var _lstAllergies = new List<string>();
         foreach(var item in _allergies){
             if(_mask > 0){
@@ -39,6 +40,7 @@ public class Allergies
                     _mask = _mask - item.Key;
                 }
             }
+            cont++;
         }
         return _lstAllergies;
     }
