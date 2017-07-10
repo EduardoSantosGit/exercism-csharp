@@ -22,7 +22,7 @@ public class AcronymTest
         Assert.Equal("FIFO", Acronym.Abbreviate("First In, First Out"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void All_caps_words()
     {
         Assert.Equal("PHP", Acronym.Abbreviate("PHP: Hypertext Preprocessor"));
