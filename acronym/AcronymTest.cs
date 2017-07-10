@@ -34,7 +34,7 @@ public class AcronymTest
         Assert.Equal("GIMP", Acronym.Abbreviate("GNU Image Manipulation Program"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Hyphenated()
     {
         Assert.Equal("CMOS", Acronym.Abbreviate("Complementary metal-oxide semiconductor"));
