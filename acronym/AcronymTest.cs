@@ -28,7 +28,7 @@ public class AcronymTest
         Assert.Equal("PHP", Acronym.Abbreviate("PHP: Hypertext Preprocessor"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Non_acronym_all_caps_word()
     {
         Assert.Equal("GIMP", Acronym.Abbreviate("GNU Image Manipulation Program"));
