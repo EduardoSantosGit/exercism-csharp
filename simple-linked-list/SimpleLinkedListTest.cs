@@ -10,14 +10,14 @@ public class SimpleLinkedListTest
         Assert.Equal(1, list.Value);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Single_item_list_has_no_next_item()
     {
         var list = new SimpleLinkedList<int>(1);
         Assert.Null(list.Next);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Two_item_list_first_value()
     {
         var list = new SimpleLinkedList<int>(2).Add(1);

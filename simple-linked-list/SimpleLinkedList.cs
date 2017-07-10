@@ -7,7 +7,7 @@ public class SimpleLinkedList<T> : IEnumerable<T>
 {   
     private T _value;
     private T _element;
-    private List<T> _lstElements;
+    private List<T> _lstElements = new List<T>();
     private int pointer;
     public SimpleLinkedList(T value)
     {
