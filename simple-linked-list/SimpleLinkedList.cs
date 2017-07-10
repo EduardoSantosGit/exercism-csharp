@@ -6,6 +6,9 @@ using System.Linq;
 public class SimpleLinkedList<T> : IEnumerable<T>
 {   
     private T _value;
+    private T _element;
+    private List<T> _lstElements;
+    private int pointer;
     public SimpleLinkedList(T value)
     {
         _value = value;
@@ -13,7 +16,7 @@ public class SimpleLinkedList<T> : IEnumerable<T>
 
     public SimpleLinkedList(IEnumerable<T> values)
     {
-        throw new NotImplementedException("You need to implement this function.");
+       _lstElements.AddRange(values);
     }
 
     public T Value 
@@ -27,14 +30,20 @@ public class SimpleLinkedList<T> : IEnumerable<T>
     public SimpleLinkedList<T> Next
     { 
         get
-        {
-            throw new NotImplementedException("You need to implement this function.");
+        {    
+            if(_lstElements.Count < 1){
+                return null;
+            }
+            pointer = pointer + 1;
+            return new SimpleLinkedList<T>(_lstElements.ElementAt(pointer));
         } 
     }
 
     public SimpleLinkedList<T> Add(T value)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        _element = value;
+        _lstElements.Add(_element);
+        return new SimpleLinkedList<T>(_value);
     }
 
     public IEnumerator<T> GetEnumerator()
