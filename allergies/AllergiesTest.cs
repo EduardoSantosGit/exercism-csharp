@@ -42,14 +42,14 @@ public class AllergiesTest
         Assert.Equal(new List<string> { "eggs" }, allergies.List());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Allergic_to_just_peanuts()
     {
         var allergies = new Allergies(2);
         Assert.Equal(new List<string> { "peanuts" }, allergies.List());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Allergic_to_eggs_and_peanuts()
     {
         var allergies = new Allergies(3);
