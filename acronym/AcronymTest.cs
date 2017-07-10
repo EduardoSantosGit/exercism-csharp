@@ -10,7 +10,7 @@ public class AcronymTest
         Assert.Equal("PNG", Acronym.Abbreviate("Portable Network Graphics"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Lowercase_words()
     {
         Assert.Equal("ROR", Acronym.Abbreviate("Ruby on Rails"));
