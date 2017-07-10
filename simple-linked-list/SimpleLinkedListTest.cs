@@ -31,7 +31,7 @@ public class SimpleLinkedListTest
         Assert.Equal(1, list.Next.Value);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Two_item_list_second_item_has_no_next()
     {
         var list = new SimpleLinkedList<int>(2).Add(1);

@@ -32,9 +32,10 @@ public class SimpleLinkedList<T> : IEnumerable<T>
     { 
         get
         {    
-            if(_lstElements.Count < 2){
-                return null;
-            }
+            if(_lstElements.Count < 2) return null;
+            
+            if(_lstElements.Count < pointer) return null;
+            
             pointer = pointer + 1;
             _value = _lstElements.ElementAt(pointer);
             return new SimpleLinkedList<T>(_lstElements.ElementAt(pointer));
