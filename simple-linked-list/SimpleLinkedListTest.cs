@@ -38,7 +38,7 @@ public class SimpleLinkedListTest
         Assert.Null(list.Next.Next);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Implements_enumerable()
     {
         var values = new SimpleLinkedList<int>(2).Add(1);

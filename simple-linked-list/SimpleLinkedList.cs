@@ -35,7 +35,7 @@ public class SimpleLinkedList<T> : IEnumerable<T>
             if(_lstElements.Count < 2) return null;
             
             if(_lstElements.Count < pointer) return null;
-            
+
             pointer = pointer + 1;
             _value = _lstElements.ElementAt(pointer);
             return new SimpleLinkedList<T>(_lstElements.ElementAt(pointer));
@@ -50,12 +50,14 @@ public class SimpleLinkedList<T> : IEnumerable<T>
     }
 
     public IEnumerator<T> GetEnumerator()
-    {
-        throw new NotImplementedException("You need to implement this function.");
+    {   
+        foreach(var item in _lstElements){
+            yield return item;
+        }
     }
 
     IEnumerator IEnumerable.GetEnumerator()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        return GetEnumerator();
     }
 }
