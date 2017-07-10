@@ -4,60 +4,47 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class SimpleLinkedList<T> : IEnumerable<T>
-{   
-    private T _value;
-    private T _element;
-    private List<T> _lstElements = new List<T>();
-    private int pointer;
-    public SimpleLinkedList(T value)
+{
+  private T[] _elements;
+
+  public SimpleLinkedList(T value)
+  {
+    _elements = new T[] {value};
+  }
+
+  public SimpleLinkedList(IEnumerable<T> values){
+    _elements = values.ToArray();
+  }
+
+  public T Value {
+    get
     {
-        _value = value;
-        _lstElements.Add(value);
+      return _elements[0];
     }
+  }
 
-    public SimpleLinkedList(IEnumerable<T> values)
+  public SimpleLinkedList<T> Next
+  {
+    get
     {
-       _lstElements.AddRange(values);
+      if (_elements.Length > 1) {
+        return new SimpleLinkedList<T>(_elements.Skip(1));
+      }
+      return null;
     }
+  }
 
-    public T Value 
-    { 
-        get
-        {
-            return _lstElements.ElementAt(pointer);
-        } 
+  public SimpleLinkedList<T> Add(T value){
+    return new SimpleLinkedList<T>(_elements.Concat(Enumerable.Repeat(value, 1)));
+  }
+
+  public IEnumerator<T> GetEnumerator(){
+    foreach (var x in _elements) {
+      yield return x;
     }
+  }
 
-    public SimpleLinkedList<T> Next
-    { 
-        get
-        {    
-            if(_lstElements.Count < 2) return null;
-            
-            if(_lstElements.Count < pointer) return null;
-
-            pointer = pointer + 1;
-            _value = _lstElements.ElementAt(pointer);
-            return new SimpleLinkedList<T>(_lstElements.ElementAt(pointer));
-        } 
-    }
-
-    public SimpleLinkedList<T> Add(T value)
-    {
-        _element = value;
-        _lstElements.Add(_element);
-        return new SimpleLinkedList<T>(_lstElements);
-    }
-
-    public IEnumerator<T> GetEnumerator()
-    {   
-        foreach(var item in _lstElements){
-            yield return item;
-        }
-    }
-
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return GetEnumerator();
-    }
+  IEnumerator IEnumerable.GetEnumerator(){
+    return _elements.GetEnumerator();
+  }
 }

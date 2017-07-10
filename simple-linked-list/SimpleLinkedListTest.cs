@@ -10,35 +10,35 @@ public class SimpleLinkedListTest
         Assert.Equal(1, list.Value);
     }
 
-    [Fact]
+    [Fact(Skip = "Remove to run test")]
     public void Single_item_list_has_no_next_item()
     {
         var list = new SimpleLinkedList<int>(1);
         Assert.Null(list.Next);
     }
 
-    [Fact]
+    [Fact(Skip = "Remove to run test")]
     public void Two_item_list_first_value()
     {
         var list = new SimpleLinkedList<int>(2).Add(1);
         Assert.Equal(2, list.Value);
     }
 
-    [Fact]
+    [Fact(Skip = "Remove to run test")]
     public void Two_item_list_second_value()
     {
         var list = new SimpleLinkedList<int>(2).Add(1);
         Assert.Equal(1, list.Next.Value);
     }
 
-    [Fact]
+    [Fact(Skip = "Remove to run test")]
     public void Two_item_list_second_item_has_no_next()
     {
         var list = new SimpleLinkedList<int>(2).Add(1);
         Assert.Null(list.Next.Next);
     }
 
-    [Fact]
+    [Fact(Skip = "Remove to run test")]
     public void Implements_enumerable()
     {
         var values = new SimpleLinkedList<int>(2).Add(1);
