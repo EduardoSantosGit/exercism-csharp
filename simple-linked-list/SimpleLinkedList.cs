@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class SimpleLinkedList<T> : IEnumerable<T>
-{
+{   
+    private T _value;
     public SimpleLinkedList(T value)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        _value = value;
     }
 
     public SimpleLinkedList(IEnumerable<T> values)
@@ -19,7 +20,7 @@ public class SimpleLinkedList<T> : IEnumerable<T>
     { 
         get
         {
-            throw new NotImplementedException("You need to implement this function.");
+            return _value;
         } 
     }
 
