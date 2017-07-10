@@ -81,7 +81,7 @@ public class AllergiesTest
                 allergies.List());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Ignore_non_allergen_score_parts()
     {
         var allergies = new Allergies(509);
