@@ -12,6 +12,7 @@ public class SimpleLinkedList<T> : IEnumerable<T>
     public SimpleLinkedList(T value)
     {
         _value = value;
+        _lstElements.Add(value);
     }
 
     public SimpleLinkedList(IEnumerable<T> values)
@@ -23,7 +24,7 @@ public class SimpleLinkedList<T> : IEnumerable<T>
     { 
         get
         {
-            return _value;
+            return _lstElements.ElementAt(pointer);
         } 
     }
 
@@ -31,10 +32,11 @@ public class SimpleLinkedList<T> : IEnumerable<T>
     { 
         get
         {    
-            if(_lstElements.Count < 1){
+            if(_lstElements.Count < 2){
                 return null;
             }
             pointer = pointer + 1;
+            _value = _lstElements.ElementAt(pointer);
             return new SimpleLinkedList<T>(_lstElements.ElementAt(pointer));
         } 
     }
@@ -43,7 +45,7 @@ public class SimpleLinkedList<T> : IEnumerable<T>
     {
         _element = value;
         _lstElements.Add(_element);
-        return new SimpleLinkedList<T>(_value);
+        return new SimpleLinkedList<T>(_lstElements);
     }
 
     public IEnumerator<T> GetEnumerator()

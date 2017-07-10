@@ -24,7 +24,7 @@ public class SimpleLinkedListTest
         Assert.Equal(2, list.Value);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Two_item_list_second_value()
     {
         var list = new SimpleLinkedList<int>(2).Add(1);
