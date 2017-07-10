@@ -16,7 +16,7 @@ public class AcronymTest
         Assert.Equal("ROR", Acronym.Abbreviate("Ruby on Rails"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Punctuation()
     {
         Assert.Equal("FIFO", Acronym.Abbreviate("First In, First Out"));
