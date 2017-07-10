@@ -56,7 +56,7 @@ public class AllergiesTest
         Assert.Equal(new List<string> { "eggs", "peanuts" }, allergies.List());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Allergic_to_lots_of_stuff()
     {
         var allergies = new Allergies(248);
