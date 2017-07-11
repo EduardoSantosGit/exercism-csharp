@@ -18,6 +18,7 @@ public static class Scrabble
             {8, new List<char> {'J','X'}},
             {10, new List<char> {'Q','Z'}}
         };
+
         return hashmap.Sum(key => key.Key * input.ToUpper().Count(value => key.Value.Contains(value)));
     }
 }

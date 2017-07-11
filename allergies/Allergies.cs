@@ -13,7 +13,7 @@ public class Allergies
     }
 
     public bool AllergicTo(string allergy)
-    {
+    {   
         int av = _allergies[allergy];
         if ( ( _mask & av ) != 0 ) return true;
         return false;

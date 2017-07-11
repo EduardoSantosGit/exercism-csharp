@@ -5,6 +5,7 @@ public static class Proverb
 {
     public static string Line(int line)
     {   
+
         string frase = "";
         Dictionary<int, string> lines = frases();
         foreach(var item in lines){
