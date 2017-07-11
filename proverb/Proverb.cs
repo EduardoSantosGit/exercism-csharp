@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public static class Proverb
 {
     public static string Line(int line)
     {   
-
+        Dictionary<int, string> lines = frases();
+        return lines.Where(x => x.Key == line).Select(x => x.Value).FirstOrDefault();
+        /* 
         string frase = "";
         Dictionary<int, string> lines = frases();
         foreach(var item in lines){
@@ -13,20 +16,22 @@ public static class Proverb
                 frase = item.Value;
             }
         }
-        return frase;
+        return frase;*/
     }
 
     public static string AllLines()
     {   
         string nfrases = "";
         Dictionary<int, string> lines = frases();
+        
+        //var etset =  lines.Select(x => x.Value.Select(s => s)).FirstOrDefault(); 
+
         foreach(var item in lines){
             if(lines.Count != item.Key){
                 nfrases += item.Value + "\n";
             } else {
                 nfrases += item.Value;
             }
-            
         }
         return nfrases;
     }
