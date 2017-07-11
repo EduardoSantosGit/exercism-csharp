@@ -14,7 +14,6 @@ public static class Scrabble
         hashMap.Add(10, new List<char> {'Q','Z'});
 
         int contador = 0;
-
         if(input == null || input == ""){
             return contador;
         }
