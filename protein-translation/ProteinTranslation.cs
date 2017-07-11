@@ -19,26 +19,22 @@ public static class ProteinTranslation
 
     public static string UnityCodon = "AAA";
     public static string[] Translate(string codon)
-    {
-        List<string> proteinas = new List<string>();
+    {   
+        List<string> proteins = new List<string>();
 
-        for (int i = 0; i < codon.Length; i += 3)
-        {
-            string molecula = string.Concat(codon[i], codon[i + 1], codon[i + 2]);
-
-            if (!_dictionary.ContainsKey(molecula))
+        for (int i = 0; i < codon.Length; i += 3){
+            var molecule = string.Concat(codon[i], codon[i + 1], codon[i + 2]);
+            if (!_dictionary.ContainsKey(molecule))
             {
                 throw new Exception();
             }
-
-            string proteina = _dictionary[molecula];
-
-            if (proteina == "Stop" || proteina == "Stop" || proteina == "Stop")
+            var protein = _dictionary[molecule];
+            if (protein == "Stop" || protein == "Stop" || protein == "Stop")
             {
                 break;
             }
-            proteinas.Add(proteina);
+            proteins.Add(protein);
         }
-        return proteinas.ToArray();
+        return proteins.ToArray();
     }
 }
