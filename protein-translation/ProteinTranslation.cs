@@ -1,53 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public static class ProteinTranslation
-{
+{   
+    //code refactor
+    public static Dictionary<string, string> _dictionary = new Dictionary<string, string>(){
+
+        {"AUG" , "Methionine" },
+        {"UUU" , "Phenylalanine" },{"UUC" , "Phenylalanine" },
+        {"UUA","Leucine" },{"UUG" , "Leucine"},
+        {"UCU" , "Serine"},{"UCC" ,"Serine" },{"UCA" ,"Serine" },{"UCG" ,"Serine" },
+        {"UAU", "Tyrosine"},{"UAC" ,"Tyrosine"},
+        {"UGU","Cysteine" },{"UGC" ,"Cysteine" },
+        {"UGG","Tryptophan" },
+        {"UAA", "Stop" },{"UAG" ,"Stop" },{"UGA", "Stop" }
+    };
+
+    public static string UnityCodon = "AAA";
     public static string[] Translate(string codon)
-    {   
+    {
+        List<string> proteinas = new List<string>();
 
-        List<string> result = new List<string>();
- 
-        Dictionary<string,string> hashProtein = new Dictionary<string,string>();
-        hashProtein.Add("AUG","Methionine");
-        hashProtein.Add("UUU","Phenylalanine");
-        hashProtein.Add("UUC","Phenylalanine");
-        hashProtein.Add("UUA","Leucine");
-        hashProtein.Add("UUG","Leucine");
-        hashProtein.Add("UCU","Serine");
-        hashProtein.Add("UCC","Serine");
-        hashProtein.Add("UCA","Serine");
-        hashProtein.Add("UCG","Serine");
-        hashProtein.Add("UAU","Tyrosine");
-        hashProtein.Add("UAC","Tyrosine");
-        hashProtein.Add("UGU","Cysteine");
-        hashProtein.Add("UGC","Cysteine");
-        hashProtein.Add("UGG","Tryptophan");
-        hashProtein.Add("UAA","STOP");
-        hashProtein.Add("UAG","STOP");
-        hashProtein.Add("UGA","STOP");
+        for (int i = 0; i < codon.Length; i += 3)
+        {
+            string molecula = string.Concat(codon[i], codon[i + 1], codon[i + 2]);
 
-        int tamanho = (codon.Length / 3);
-        bool auxilio = false;
-
-        for(int i=0;i<tamanho;i++){
-            if(auxilio == false){
-                foreach(var item in hashProtein){
-                if(item.Key == codon.Substring(i*3,3)){
-                    if(item.Value.Equals("STOP")){
-                       auxilio = true;
-                    } else {
-                        result.Add(item.Value);
-                    } 
-                }
+            if (!_dictionary.ContainsKey(molecula))
+            {
+                throw new Exception();
             }
+
+            string proteina = _dictionary[molecula];
+
+            if (proteina == "Stop" || proteina == "Stop" || proteina == "Stop")
+            {
+                break;
             }
+            proteinas.Add(proteina);
         }
-
-        if(result.Count == 0){
-            throw new Exception();
-        }
-
-        return result.ToArray();
+        return proteinas.ToArray();
     }
 }
