@@ -2,24 +2,24 @@
 
 public class BankAccount
 {
-    private Estado estado;
-    private float valor;
+    private State _state;
+    private float _value;
     public void Open()
     {
-      estado = Estado.OPEN;
+      _state = State.OPEN;
     }
 
     public void Close()
     {
-      estado = Estado.CLOSE;
+      _state = State.CLOSE;
     }
 
     public float Balance
     {
         get
         {
-           if(estado == Estado.OPEN){
-              return valor;  
+           if(_state == State.OPEN){
+              return _value;  
            }
            else {
               throw new InvalidOperationException(); 
@@ -30,10 +30,10 @@ public class BankAccount
     public void UpdateBalance(float change)
     {
         lock(this)
-        valor += change;
+        _value += change;
     }
 
-    enum Estado
+    enum State
         {
         OPEN,
         CLOSE
