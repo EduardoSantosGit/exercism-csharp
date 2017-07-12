@@ -3,7 +3,7 @@ using System.Text;
 
 public class Robot
 {     
-    private string resultado;
+    private string _result;
     private static Random random = new Random();
 
     public Robot(){
@@ -13,19 +13,19 @@ public class Robot
     public string Name
     {
         get{
-            return resultado;
+            return _result;
         }
     }
 
     public void Reset()
     {   
-        string old = this.resultado; 
-        string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        char ch1=characters[random.Next(characters.Length)];
-        char ch2=characters[random.Next(characters.Length)];                
-        int numeros = random.Next(100, 999);
-        this.resultado = ch1.ToString() + ch2.ToString() + numeros.ToString();   
-        if(resultado.Equals(old)){
+        var old = this._result; 
+        var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var ch1=characters[random.Next(characters.Length)];
+        var ch2=characters[random.Next(characters.Length)];                
+        var numbers = random.Next(100, 999);
+        this._result = ch1.ToString() + ch2.ToString() + numbers.ToString();   
+        if(_result.Equals(old)){
             new Robot();
         }
     }
