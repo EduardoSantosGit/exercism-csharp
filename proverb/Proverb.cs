@@ -20,12 +20,15 @@ public static class Proverb
     }
 
     public static string AllLines()
-    {   
+    {     
+        List<string> listValues = new List<string>();
+        listValues.AddRange(frases().Values);
+        return listValues.Aggregate((a , b) => a + "\n" +  b);
+       
+       /* 
+        var etset =  lines.Select(x => x.Value.Select(s => s)).FirstOrDefault(); 
         string nfrases = "";
         Dictionary<int, string> lines = frases();
-        
-        //var etset =  lines.Select(x => x.Value.Select(s => s)).FirstOrDefault(); 
-
         foreach(var item in lines){
             if(lines.Count != item.Key){
                 nfrases += item.Value + "\n";
@@ -33,7 +36,7 @@ public static class Proverb
                 nfrases += item.Value;
             }
         }
-        return nfrases;
+        return nfrases;*/
     }
 
     public static Dictionary<int, string> frases(){
