@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 public enum Classification
 {
@@ -10,28 +11,30 @@ public enum Classification
 public static class PerfectNumbers
 {
     public static Classification Classify(int number)
-    {  
-        if(number <= 0){
+    {
+        if (number <= 0)
+        {
             throw new ArgumentOutOfRangeException();
         }
-        
+        /* 
         int acumulador = 0;
         for(int i=1;i<number;i++){
             if(number % i == 0){
                 acumulador += i;
             }
-        }
+        }*/
 
-        Classification classification;
+        var accumulator = Enumerable.Range(1, number - 1).Where(x => number % x == 0).Sum();
 
-        if(acumulador == number){
+        Classification classification = Classification.Deficient;
+
+        if (accumulator == number)
+        {
             classification = Classification.Perfect;
         }
-        else if (acumulador > number){
+        else if (accumulator > number)
+        {
             classification = Classification.Abundant;
-        }
-        else {
-            classification = Classification.Deficient;
         }
         return classification;
     }
