@@ -16,40 +16,31 @@ public class School
         return addSorter(hashAlunos);
     }
 
-    public IEnumerable<string> Grade(int grade)
-    {
-        foreach(var value in hashAlunos){
-            if(value.Value == grade){
-                nomeAlunos.Add(value.Key);
-            }
-        }
+    public IEnumerable<string> Grade(int grade){   
+        nomeAlunos.AddRange(hashAlunos.Where(x => x.Value == grade).Select(x => x.Key));
         nomeAlunos.Sort();
         return nomeAlunos;
     }
 
     public IEnumerable<string> addSorter(Dictionary<string,int> values){
-         List<int> tempGrade = new List<int>();
+         
          List<int> distinctGrade = new List<int>();
-         List<string> nomes = new List<string>();
-         List<string> nomesSort = new List<string>();
+         List<string> names = new List<string>();
+         List<string> namesSort = new List<string>();
+     
+        distinctGrade.AddRange(values.Select(x => x.Value).ToList().Distinct());
+        distinctGrade.Sort();
 
-        foreach(var key in values){
-            tempGrade.Add(key.Value);
-        }
-
-        distinctGrade.AddRange(tempGrade.Distinct());
-
-        distinctGrade.Sort(); 
         foreach(var key in distinctGrade){
             foreach(var hash in hashAlunos){
                 if(key == hash.Value){
-                    nomes.Add(hash.Key);
+                    names.Add(hash.Key);
                 }
             }
-            nomes.Sort();
-            nomesSort.AddRange(nomes);
-            nomes.Clear();
+            names.Sort();
+            namesSort.AddRange(names);
+            names.Clear();
         }
-        return nomesSort;
+        return namesSort;
     }
 }
