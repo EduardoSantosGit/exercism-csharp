@@ -10,13 +10,13 @@ public class RotationalCipherTest
         Assert.Equal("b", RotationalCipher.Rotate("a", 1));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Rotate_a_by_26_same_output_as_input()
     {
         Assert.Equal("a", RotationalCipher.Rotate("a", 26));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Rotate_a_by_0_same_output_as_input()
     {
         Assert.Equal("a", RotationalCipher.Rotate("a", 0));
