@@ -13,7 +13,7 @@ public class MatrixTest
         Assert.Equal(expected, matrix.Row(0));
     }
 
-    [Theory(Skip = "Remove to run test")]
+    [Theory]
     [InlineData("5", new[] { 5 })]
     [InlineData("9 7", new[] { 9, 7 })]
     [InlineData("9 8 7\n19 18 17", new[] { 19, 18, 17 })]

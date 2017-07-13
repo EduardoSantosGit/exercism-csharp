@@ -16,13 +16,7 @@ public class Matrix
     {
         get
         {   
-            var contador = 0;
-            for(int i=0;i<_input.Length;i++){
-                if(_input[i] == '\''){
-                    contador += 1;
-                }
-            }
-            return contador +1;   
+             return _input.Replace(" ","").Split('\n').Count();
         }
     }
 
@@ -35,16 +29,27 @@ public class Matrix
     }
 
     public int[] Row(int row) 
-    {  
+    {   
         _row = row;
-        _arrayCube = _input.Split('\n');
-        for(int i=0;i<_arrayCube.Length;i++){
-            if(Int32.Parse(_arrayCube[i]) == row){
-                _rows = new int [] {Int32.Parse(_arrayCube[i])};
-            }
+        /* 
+        foreach(var i in teste2){
+            Console.WriteLine("array " + i[0] + " " + i[1] + " " + i[2]);
         }
-        Console.WriteLine(_rows);
-        return _rows;
+
+
+        var teste = _input.Split('\n').Select(x => x.Split(' ')).Select(x => x);
+                          //.Skip(0).Select(x => x).SelectMany(x => x).Select(a => a - '0').ToArray();
+        foreach(var i in teste.Skip(0)){
+            var t = i.SelectMany(x => x).Select(a => a - '0').ToArray();
+            //Console.WriteLine("array" + t[1]);
+        }
+
+       
+       return _input.Replace(" ","").Split('\n').Select(x => x)
+                    .ElementAt(_row).ToCharArray().Select(a => a - '0').ToArray();*/
+                    
+       return _input.Split('\n').Select(x => x.Split(' ')).Select(x => x)
+                           .ElementAt(_row).Select(x => Convert.ToInt32(x)).ToArray();                 
     }   
 
     public int[] Col(int col)
