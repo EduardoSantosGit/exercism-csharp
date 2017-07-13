@@ -7,13 +7,13 @@ public class SieveTest
     {
         Assert.Equal(new[] { 2 }, Sieve.Primes(2));
     }
-
+    
     [Fact]
     public void Finds_primes_up_to_10()
     {
         Assert.Equal(new[] { 2, 3, 5, 7 }, Sieve.Primes(10));
     }
-
+    
     [Fact]
     public void Finds_primes_up_to_1000()
     {
