@@ -1,21 +1,24 @@
 ﻿using System;
+using System.Linq;
 
 public static class Pangram{
     public static bool IsPangram(string input)
     {  
        input = formataInput(input);
        var letter = "abcdefghijklmnopqrstuvwxyz";
-       var answer = false;
-       var accumulator = 0;
-       for(var i=0;i<letter.Length;i++){
+       
+       var accumulator = letter.Where(x => input.Contains(x));
+    
+       /*for(var i=0;i<letter.Length;i++){
           if(input.Contains(letter[i].ToString())){
                 accumulator += 1;
-            }
-       }
-       if(accumulator > 25){
-            answer = true;
+          }
+       }*/
+
+       if(accumulator.Count() > 25){
+           return true;
        } 
-       return answer;
+       return false;
     }
 
     public static string formataInput(string input){
