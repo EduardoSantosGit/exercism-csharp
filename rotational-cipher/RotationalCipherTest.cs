@@ -34,7 +34,7 @@ public class RotationalCipherTest
         Assert.Equal("a", RotationalCipher.Rotate("n", 13));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Rotate_capital_letters()
     {
         Assert.Equal("TRL", RotationalCipher.Rotate("OMG", 5));
