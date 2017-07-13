@@ -24,7 +24,7 @@ public class MatrixTest
         Assert.Equal(expected, matrix.Row(matrix.Rows - 1));
     }
 
-    [Theory(Skip = "Remove to run test")]
+    [Theory]
     [InlineData("55 44", new[] { 55 })]
     [InlineData("89 1903\n18 3", new[] { 89, 18 })]
     [InlineData("1 2 3\n4 5 6\n7 8 9\n8 7 6", new[] { 1, 4, 7, 8 })]
