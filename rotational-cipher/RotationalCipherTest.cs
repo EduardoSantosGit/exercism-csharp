@@ -40,7 +40,7 @@ public class RotationalCipherTest
         Assert.Equal("TRL", RotationalCipher.Rotate("OMG", 5));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Rotate_spaces()
     {
         Assert.Equal("T R L", RotationalCipher.Rotate("O M G", 5));
