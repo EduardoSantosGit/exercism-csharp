@@ -46,7 +46,7 @@ public class RotationalCipherTest
         Assert.Equal("T R L", RotationalCipher.Rotate("O M G", 5));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Rotate_numbers()
     {
         Assert.Equal("Xiwxmrk 1 2 3 xiwxmrk", RotationalCipher.Rotate("Testing 1 2 3 testing", 4));
