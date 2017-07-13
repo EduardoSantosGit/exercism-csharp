@@ -28,7 +28,7 @@ public class RotationalCipherTest
         Assert.Equal("z", RotationalCipher.Rotate("m", 13));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Rotate_n_by_13_with_wrap_around_alphabet()
     {
         Assert.Equal("a", RotationalCipher.Rotate("n", 13));
