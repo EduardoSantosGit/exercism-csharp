@@ -37,7 +37,7 @@ public class LargestSeriesProductTest
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
 
     public void Finds_the_largest_product_if_span_equals_length()
 
@@ -57,7 +57,7 @@ public class LargestSeriesProductTest
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
 
     public void Can_find_the_largest_product_of_3_with_numbers_in_order()
 
@@ -77,7 +77,7 @@ public class LargestSeriesProductTest
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
 
     public void Can_find_the_largest_product_of_3()
 
