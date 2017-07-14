@@ -97,7 +97,7 @@ public class LargestSeriesProductTest
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
 
     public void Can_find_the_largest_product_of_5_with_numbers_in_order()
 
@@ -117,7 +117,7 @@ public class LargestSeriesProductTest
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
 
     public void Can_get_the_largest_product_of_a_big_number()
 
@@ -137,7 +137,7 @@ public class LargestSeriesProductTest
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
 
     public void Can_get_the_largest_product_of_a_big_number_II()
 
