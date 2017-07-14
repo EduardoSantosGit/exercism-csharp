@@ -293,7 +293,7 @@ public class LargestSeriesProductTest
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
 
     public void Rejects_invalid_character_in_digits()
 
@@ -311,7 +311,7 @@ public class LargestSeriesProductTest
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
 
     public void Rejects_negative_span()
 
