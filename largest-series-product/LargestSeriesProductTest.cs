@@ -157,7 +157,7 @@ public class LargestSeriesProductTest
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
 
     public void Can_get_the_largest_product_of_a_big_number_III()
 
@@ -177,7 +177,7 @@ public class LargestSeriesProductTest
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
 
     public void Reports_zero_if_the_only_digits_are_zero()
 
@@ -197,7 +197,7 @@ public class LargestSeriesProductTest
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
 
     public void Reports_zero_if_all_spans_include_zero()
 
