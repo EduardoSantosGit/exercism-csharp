@@ -52,13 +52,13 @@ public class RotationalCipherTest
         Assert.Equal("Xiwxmrk 1 2 3 xiwxmrk", RotationalCipher.Rotate("Testing 1 2 3 testing", 4));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Rotate_punctuation()
     {
         Assert.Equal("Gzo'n zvo, Bmviyhv!", RotationalCipher.Rotate("Let's eat, Grandma!", 21));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Rotate_all_letters()
     {
         Assert.Equal("Gur dhvpx oebja sbk whzcf bire gur ynml qbt.", RotationalCipher.Rotate("The quick brown fox jumps over the lazy dog.", 13));
