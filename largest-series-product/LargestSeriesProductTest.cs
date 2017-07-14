@@ -17,7 +17,7 @@ public class LargestSeriesProductTest
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
 
     public void Can_find_the_largest_product_of_2()
 
