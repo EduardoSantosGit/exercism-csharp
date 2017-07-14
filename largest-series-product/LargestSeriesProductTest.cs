@@ -217,7 +217,7 @@ public class LargestSeriesProductTest
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
 
     public void Reports_1_for_empty_string_and_empty_product_0_span()
 
@@ -237,7 +237,7 @@ public class LargestSeriesProductTest
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
 
     public void Reports_1_for_nonempty_string_and_empty_product_0_span()
 
@@ -257,7 +257,7 @@ public class LargestSeriesProductTest
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
 
     public void Rejects_span_longer_than_string_length()
 
@@ -275,7 +275,7 @@ public class LargestSeriesProductTest
 
 
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
 
     public void Rejects_empty_string_and_nonzero_span()
 
